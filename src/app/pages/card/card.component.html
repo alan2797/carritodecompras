@@ -1,0 +1,13 @@
+<p-card header="{{item.name}}">
+  <ng-template pTemplate="header">
+      <img alt="Card" [src]="item.image" style="height: 200px;" />
+  </ng-template>
+  <p class="p-0">
+      {{item.description}}
+  </p>
+  <ng-template pTemplate="footer">
+      <p-button [label]="label" icon="pi pi-check" [disabled]="disabled" (click)="add()"></p-button>
+  </ng-template>
+</p-card>
+
+
