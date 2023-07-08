@@ -9,4 +9,5 @@ export interface Products {
   category?: string;
   image?: string;
   rating?: number;
+  disabled?: boolean;
 }

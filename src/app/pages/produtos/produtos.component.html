@@ -25,27 +25,8 @@
           <div class="col-12 sm:col-12">
             <div class="grid">
               <div class="card">
-                <div *ngFor="let product of productosSeleccionados">
-                  <div class="col-12 fadeinleft animation-duration-500">
-                    <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
-                        <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]="product.image" [alt]="product.name" />
-                        <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
-                            <div class="flex flex-column align-items-center sm:align-items-start gap-3">
-                                <div class="text-2xl font-bold text-900">{{ product.name }}</div>
-                                <div class="flex align-items-center gap-3">
-                                    <span class="flex align-items-center gap-2">
-                                        <i class="pi pi-tag"></i>
-                                        <span class="font-semibold">{{ product.category }}</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
-                                <span class="text-2xl font-semibold">{{'$'+ product.price }}</span>
-                                <button pButton icon="pi pi-times" class="md:align-self-end mb-2 p-button-rounded" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></button>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
+                <div *ngFor="let productSelect of productosSeleccionados">
+                  <app-shooping-cart [productSelect]="productSelect" (itemSeleccionado)="remove_shopping_cart_item($event)"></app-shooping-cart>
                 </div>
               </div>
             </div>

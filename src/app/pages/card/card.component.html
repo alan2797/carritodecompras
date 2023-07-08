@@ -6,7 +6,7 @@
       {{item.description}}
   </p>
   <ng-template pTemplate="footer">
-      <p-button [label]="label" icon="pi pi-check" [disabled]="disabled" (click)="add()"></p-button>
+      <p-button [label]="item.disabled ? 'Ya fue agregado': 'Agregar' " icon="pi pi-check" [disabled]="item.disabled" (click)="add()"></p-button>
   </ng-template>
 </p-card>
 

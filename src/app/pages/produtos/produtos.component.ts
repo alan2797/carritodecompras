@@ -27,13 +27,24 @@ export class ProdutosComponent {
 
   getCliente() {
     this.productService.getCliente().subscribe((response) => {
-      console.log(response);
+      // console.log(response);
     });
   }
 
   selectItem(item: Products) {
     console.log(item);
     this.productosSeleccionados.push(item);
+    item.disabled=true;
     console.log(this.productosSeleccionados);
+  }
+
+  remove_shopping_cart_item(item: Products){
+   this.productosSeleccionados.forEach((Element,index) => {
+    if (Element.id == item.id) {
+      this.productosSeleccionados.splice(index,1)
+      item.disabled=false;
+    }
+   })
+   console.log(this.productosSeleccionados);
   }
 }

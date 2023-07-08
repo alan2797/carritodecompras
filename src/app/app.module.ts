@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
 import { DataViewComponent } from './pages/data-view/data-view.component';
+import { ShoopingCartComponent } from './pages/shooping-cart/shooping-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DataViewComponent } from './pages/data-view/data-view.component';
     CardComponent,
     PruebaComponent,
     DataViewComponent,
+    ShoopingCartComponent,
   ],
   imports: [
     BrowserModule,

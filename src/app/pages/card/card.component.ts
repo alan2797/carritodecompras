@@ -20,8 +20,10 @@ export class CardComponent {
   }
 
   add() {
-    this.disabled = true;
+    this.item.disabled = true;
     this.label = 'ya fue agregado';
     this.itemSeleccionado.emit(this.item);
   }
+
+  
 }
